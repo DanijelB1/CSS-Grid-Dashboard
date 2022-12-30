@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
     margin:0;
     padding:0;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    font-family: 'Roboto', sans-serif;
 }
+
 
 :root {
     --sidebar-grid-columns: 1fr 4fr;
     --sidebar-grid-text-position: 1 / 2 / 2 / 3;
+    --sidebar-text-color: white;
 }
 
 body {
@@ -56,6 +60,8 @@ body {
 
 .sidebar {
     grid-area: 1 / 1 / 3 / 2;
+    background-color: #0ea5e9;
+    /* padding-left: 25px; */
 }
 
 .logo {
@@ -64,19 +70,25 @@ body {
     height: 80px;
     margin-bottom: 80px;
     margin-top: 25px;
+    align-items: center;
+    padding-left: 15px;
 }
+
 
 .logo > p {
     grid-area: var(--sidebar-grid-text-position);
     font-size: 3vh;
     display: grid;
     align-items: center;
+    color: var(--sidebar-text-color);
+    font-weight: bold;
 }
 
 .sidebar > ul > li {
     display: grid;
     grid-template-columns: var(--sidebar-grid-columns);
     height: 50px;
+    padding-left: 25px;
 }
 
 .sidebar > ul {
@@ -89,6 +101,8 @@ body {
     display: grid;
     align-items: center;
     font-size: 2vh;
+    color: var(--sidebar-text-color);
+    font-weight: bold;
 }
 
 .sidebar-settings {
@@ -113,9 +127,8 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
     padding: 30px;
     gap: 30px;
-    /* justify-items: center; */
+    justify-items: center;
 }
-
 
 .side-section {
     grid-area: 1 / 2 / 3 / 3;
