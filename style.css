@@ -15,7 +15,7 @@
 
 body {
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 200px 4fr;
     grid-template-columns: 1fr 5fr;
 
     height: 1365px;
@@ -26,24 +26,52 @@ body {
 .header {
     display: grid;
     grid-auto-flow: row;
-    grid-template-rows: 1fr 1fr;
-    /* padding-left: 25px; */
+    grid-template-rows: 100px 100px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .upper-header {
-    padding-top: 15px;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 1fr 10fr 1fr 1fr 3fr;
+    grid-template-columns: 50px 10fr 1fr 1fr 3fr;
+    align-items: center;
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.upper-header > svg:first-child {
+    justify-self: center;
+}
+
+.upper-header > p {
+    font-size: 30px;
+    font-weight: bold;
+    justify-self: left;
+    align-self: center;
+    padding-left: 15px;
+}
+
+.bell {
+    justify-self: center;
+    align-self: center;
+}
+
+.upper-header > img {
+    height: 90px;
+    align-self: center;
+    justify-self: center;
 }
 
 .lower-header {
     display: grid;
-    grid-template-columns: 1fr 1fr 3fr 6fr 5fr;
+    grid-template-columns: 50px 1fr 3fr 6fr 5fr;
 }
 
 .lower-header > img {
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 3;
+    height: 90px;
+    align-self: center;
+    margin-left: 10px;
 }
 
 .lower-header > p {
@@ -54,6 +82,18 @@ body {
     grid-area: 1 / 5 / 2 / 6;
     display: flex;
     justify-content: space-around;
+}
+
+.identifier {
+    align-self: center;
+    font-size: 25px;
+}
+
+.upper-header > input {
+    height: 36px;
+    font-size: 20px;
+    min-width: 400px;
+    max-width: 1200px;
 }
 
 /* SIDEBAR */
@@ -118,12 +158,13 @@ body {
     grid-template-columns: 10fr 2fr;
     grid-template-rows: 1fr 9fr;
     overflow: hidden;
+    background-color: #e0f2fe;
 }
 
 .card-section {
     display: grid;
     grid-area: 1 / 1 / 3 / 2;
-    grid-template-columns: repeat(auto-fit, 400px);
+    grid-template-columns: repeat(auto-fit, 450px);
     grid-template-rows: 1fr 1fr 1fr;
     padding: 30px;
     gap: 30px;
@@ -137,10 +178,36 @@ body {
 .card {
     display: grid;
     grid-template-rows: 1fr 5fr 1fr;
-    width: 400px;
+    max-width: 450px;
+    max-height: 200px;
+    background-color: white;
+    padding: 25px;
+    padding-top: 50px;
+    border-radius: 15px;
+    border-left: 10px solid orange;
 }
 
 .side-section {
     display: grid;
     grid-template-rows: 1fr 4fr 1fr 4fr;
 }
+
+.announcement {
+    background-color: white;
+}
+
+.trending-section {
+    background-color: white;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-icons > svg {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
