@@ -2,7 +2,6 @@
 * {
     margin:0;
     padding:0;
-    /* border: 1px solid blue; */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -28,7 +27,6 @@ body {
     grid-auto-flow: row;
     grid-template-rows: 100px 100px;
     padding-left: 100px;
-    padding-right: 100px;
 }
 
 .upper-header {
@@ -48,7 +46,6 @@ body {
     font-weight: bold;
     justify-self: left;
     align-self: center;
-    padding-left: 15px;
 }
 
 .bell {
@@ -64,7 +61,7 @@ body {
 
 .lower-header {
     display: grid;
-    grid-template-columns: 50px 1fr 3fr 6fr 5fr;
+    grid-template-columns: 50px 1fr 3fr 6fr 1fr 5fr;
 }
 
 .lower-header > img {
@@ -79,9 +76,22 @@ body {
 }
 
 .buttons {
-    grid-area: 1 / 5 / 2 / 6;
+    grid-area: 1 / 6 / 2 / 7;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons > button {
+    background-color: #0ea5e9;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    border-style: none;
+
+    font-size: large;
+    font-weight: bold;
 }
 
 .identifier {
@@ -93,7 +103,11 @@ body {
     height: 36px;
     font-size: 20px;
     min-width: 400px;
-    max-width: 1200px;
+    max-width: 1000px;
+    background-color: #e0f2fe;
+    border-style: none;
+    border-radius: 15px;
+    padding-left: 10px;
 }
 
 /* SIDEBAR */
@@ -101,7 +115,6 @@ body {
 .sidebar {
     grid-area: 1 / 1 / 3 / 2;
     background-color: #0ea5e9;
-    /* padding-left: 25px; */
 }
 
 .logo {
@@ -190,14 +203,43 @@ body {
 .side-section {
     display: grid;
     grid-template-rows: 1fr 4fr 1fr 4fr;
+    gap: 10px;
+    padding-right: 25px;
+    padding-bottom: 25px;
 }
 
 .announcement {
-    background-color: white;
+    /* background-color: white; */
+    padding: 30px;
 }
 
 .trending-section {
     background-color: white;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    border-radius: 10px;
+}
+
+.trend {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
+}
+
+.trend > p {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.trend > h6 {
+    align-self: end;
+    font-size: medium;
+}
+
+.trend > img {
+    grid-area: 1 / 1 / 3 / 2;
+    max-height: 60%;
+    align-self: center;
+    justify-self: center;
 }
 
 .card-icons {
@@ -210,4 +252,28 @@ body {
     margin-right: 10px;
 }
 
+.announcements-section {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 5px;
+
+    background-color: white;
+    border-radius: 10px;
+}
+
+.announcement > h6 {
+    font-size: large;
+    margin-bottom: 5px;
+}
+
+.announcements-section > .announcement:nth-child(-n + 2) {
+    border-bottom: 1px solid gray;
+}
+
+.title, .title2 {
+    display: flex;
+    align-items: flex-end;
+    font-size: 25px;
+    font-weight: bold;
+} 
 
