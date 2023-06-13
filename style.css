@@ -69,10 +69,12 @@ body {
     height: 90px;
     align-self: center;
     margin-left: 10px;
+    margin-bottom: 20px;
 }
 
 .lower-header > p {
     grid-area: 1 / 3 / 2 / 4;
+    margin-top: 10px;
 }
 
 .buttons {
@@ -93,6 +95,7 @@ body {
     font-size: large;
     font-weight: bold;
 }
+
 
 .identifier {
     align-self: center;
